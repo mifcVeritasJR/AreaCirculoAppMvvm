@@ -1,12 +1,14 @@
-﻿namespace AreaCirculoAppMvvm
+﻿using AreaCirculoAppMvvm;
+
+namespace AreaCirculoAppMvvm
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
-            InitializeComponent();  // Inicializa los componentes definidos en el XAML
+            InitializeComponent();
+            BindingContext = new MainPageViewModel(); // Asegúrate de que esta línea esté presente
         }
     }
 }
-
 
