@@ -5,11 +5,9 @@
         public App()
         {
             InitializeComponent();
-        }
 
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new AppShell());
+            // Se establece el Shell como la página principal
+            MainPage = new AppShell();
         }
     }
 }

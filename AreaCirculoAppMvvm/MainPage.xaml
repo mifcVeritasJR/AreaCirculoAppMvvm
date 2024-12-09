@@ -12,25 +12,24 @@
                    HorizontalOptions="Center" />
 
             <!-- Campo de entrada para el radio -->
-            <Entry x:Name="RadioEntry"
-                   Placeholder="Ingrese el radio (r)"
+            <Entry Placeholder="Ingrese el radio (r)"
                    Keyboard="Numeric"
-                   TextColor="Black"/>
+                   Text="{Binding Radio}"
+                   TextColor="Black" />
 
             <!-- Botón para realizar el cálculo -->
             <Button Text="Calcular Área"
-                    Clicked="OnCalcularAreaClicked"
+                    Command="{Binding CalcularAreaCommand}"
                     HorizontalOptions="Center" />
 
             <!-- Etiqueta para mostrar el resultado -->
-            <Label x:Name="ResultadoLabel"
-                   Text="Área: "
+            <Label Text="{Binding Resultado}"
                    FontSize="18"
                    HorizontalOptions="Center" />
 
             <!-- Botón para limpiar los campos -->
             <Button Text="Limpiar"
-                    Clicked="OnLimpiarClicked"
+                    Command="{Binding LimpiarCommand}"
                     HorizontalOptions="Center" />
 
         </VerticalStackLayout>
