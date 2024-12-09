@@ -7,10 +7,8 @@
     Shell.FlyoutBehavior="Flyout"
     Title="AreaCirculoAppMvvm">
 
-    <!-- ShellContent para la página principal -->
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 </Shell>
-

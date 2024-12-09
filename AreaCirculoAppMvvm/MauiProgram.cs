@@ -11,8 +11,8 @@ namespace AreaCirculoAppMvvm
         {
             var builder = MauiApp.CreateBuilder();
             builder
-                .UseMauiApp<App>() // Esta es la primera llamada
-                .UseMauiCommunityToolkit() // Esta es la llamada correcta, debe ir después de .UseMauiApp<App>()
+                .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

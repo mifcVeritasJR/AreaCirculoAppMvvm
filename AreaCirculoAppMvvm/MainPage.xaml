@@ -6,33 +6,26 @@
     <ScrollView>
         <VerticalStackLayout Padding="30,0" Spacing="25">
 
-            <!-- Título de la aplicación -->
             <Label Text="Cálculo del área del círculo"
                    FontSize="24"
                    HorizontalOptions="Center" />
 
-            <!-- Campo de entrada para el radio -->
             <Entry Placeholder="Ingrese el radio (r)"
                    Keyboard="Numeric"
                    Text="{Binding Radio}"
                    TextColor="Black" />
 
-            <!-- Botón para realizar el cálculo -->
             <Button Text="Calcular Área"
                     Command="{Binding CalcularAreaCommand}"
                     HorizontalOptions="Center" />
 
-            <!-- Etiqueta para mostrar el resultado -->
             <Label Text="{Binding Resultado}"
                    FontSize="18"
                    HorizontalOptions="Center" />
 
-            <!-- Botón para limpiar los campos -->
             <Button Text="Limpiar"
                     Command="{Binding LimpiarCommand}"
                     HorizontalOptions="Center" />
-
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>

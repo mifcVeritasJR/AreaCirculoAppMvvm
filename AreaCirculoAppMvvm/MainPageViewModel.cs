@@ -35,10 +35,8 @@ namespace AreaCirculoAppMvvm
             }
         }
 
-        // Comando para calcular el área
         public ICommand CalcularAreaCommand { get; }
 
-        // Comando para limpiar los campos
         public ICommand LimpiarCommand { get; }
 
         public MainPageViewModel()
@@ -47,7 +45,6 @@ namespace AreaCirculoAppMvvm
             LimpiarCommand = new Command(Limpiar);
         }
 
-        // Método para calcular el área
         private void CalcularArea()
         {
             if (double.TryParse(Radio, out double radio))
@@ -55,7 +52,7 @@ namespace AreaCirculoAppMvvm
                 if (radio > 0)
                 {
                     double area = Math.PI * Math.Pow(radio, 2);
-                    Resultado = $"Área: {area:F2}";  // Mostrar el área con 2 decimales
+                    Resultado = $"Área: {area:F2}";
                 }
                 else
                 {
@@ -68,14 +65,12 @@ namespace AreaCirculoAppMvvm
             }
         }
 
-        // Método para limpiar los campos
         private void Limpiar()
         {
             Radio = string.Empty;
             Resultado = string.Empty;
         }
 
-        // Implementación de INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)
